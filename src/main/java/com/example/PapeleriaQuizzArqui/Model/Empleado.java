@@ -13,6 +13,7 @@ public class Empleado {
     private String cargo;
     private String telefono;
 
+
     public Empleado() {}
 
     public Empleado(String nombre, String cargo, String telefono) {

@@ -4,28 +4,28 @@ package com.example.PapeleriaQuizzArqui.Model;
 import jakarta.persistence.*;
 
 @Entity
-public class Proovedor {
+public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idProovedor;
+    private int idProveedor;
 
     private String nombre;
     private String telefono;
     private String correo;
     private String direccion;
 
-    public Proovedor() {}
+    public Proveedor() {}
 
-    public Proovedor(String nombre, String telefono, String correo, String direccion) {
+    public Proveedor(String nombre, String telefono, String correo, String direccion) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.correo = correo;
         this.direccion = direccion;
     }
 
-    public int getIdProovedor() { return idProovedor; }
-    public void setIdProovedor(int idProveedor) { this.idProovedor = idProveedor; }
+    public int getIdProveedor() { return idProveedor; }
+    public void setIdProveedor(int idProveedor) { this.idProveedor = idProveedor; }
 
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
@@ -42,7 +42,7 @@ public class Proovedor {
     @Override
     public String toString() {
         return "Proveedor{" +
-                "idProovedorr=" + idProovedor +
+                "idProveedor=" + idProveedor +
                 ", nombre='" + nombre + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", correo='" + correo + '\'' +

@@ -2,18 +2,22 @@ package com.example.PapeleriaQuizzArqui.Model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCliente;
+    private Integer idCliente;
 
     private String nombre;
     private String cedula;
     private String telefono;
     private String correo;
 
+    @OneToMany(mappedBy = "cliente")
+    private List<Venta> ventas;
     public Cliente() {}
 
     public Cliente(String nombre, String cedula, String telefono, String correo) {

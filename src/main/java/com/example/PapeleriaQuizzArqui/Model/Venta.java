@@ -14,11 +14,11 @@ public class Venta {
     private LocalDate fecha;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente")
+    @JoinColumn(name = "idCliente")
     private Cliente cliente;
 
     @ManyToOne
-    @JoinColumn(name = "id_empleado")
+    @JoinColumn(name = "idEmpleado")
     private Empleado empleado;
 
     @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL)

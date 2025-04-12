@@ -15,17 +15,17 @@ public class Producto {
     private int stock;
 
     @ManyToOne
-    @JoinColumn(name = "id_proveedor")
-    private Proovedor proovedor;
+    @JoinColumn(name = "idProveedor")
+    private Proveedor proveedor;
 
     public Producto() {}
 
-    public Producto(String nombre, String descripcion, double precio, int stock, Proovedor proovedor) {
+    public Producto(String nombre, String descripcion, double precio, int stock, Proveedor proveedor) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;
         this.stock = stock;
-        this.proovedor = proovedor;
+        this.proveedor = proveedor;
     }
 
     public int getIdProducto() { return idProducto; }
@@ -43,8 +43,8 @@ public class Producto {
     public int getStock() { return stock; }
     public void setStock(int stock) { this.stock = stock; }
 
-    public Proovedor getProveedor() { return proovedor; }
-    public void setProveedor(Proovedor proovedor) { this.proovedor = proovedor; }
+    public Proveedor getProveedor() { return proveedor; }
+    public void setProveedor(Proveedor proveedor) { this.proveedor = proveedor; }
 
     @Override
     public String toString() {
@@ -54,7 +54,7 @@ public class Producto {
                 ", descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
                 ", stock=" + stock +
-                ", proovedor=" + proovedor +
+                ", proovedor=" + proveedor +
                 '}';
     }
 }
